@@ -8,7 +8,7 @@ project(
   {{project_name}}
   DESCRIPTION "{{project_description}}"
   {% if lang == "cpp" %}LANGUAGES CXX
-  {% elseif lang == "c" %}LANGUAGES C
+  {% else if lang == "c" %}LANGUAGES C
   {% endif %}
 )
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
