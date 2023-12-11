@@ -31,8 +31,23 @@ install(TARGETS {{project_name}}
     ARCHIVE DESTINATION lib
 )
 
+
 set(BUILD_DIR {{ build_dir }})
-set_target_properties({{project_name}} PROPERTIES RUNTIME_OUTPUT_DIRECTORY {{build_dir}})
+set_target_properties(
+  ${PROJECT_NAME} 
+  PROPERTIES 
+    RUNTIME_OUTPUT_DIRECTORY build
+)
+set_target_properties(
+  ${PROJECT_NAME} 
+  PROPERTIES
+    ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_BINARY_DIR}/lib"
+)
+set_target_properties(
+  ${PROJECT_NAME} 
+  PROPERTIES
+    LIBRARY_OUTPUT_DIRECTORY "${CMAKE_SOURCE_DIR}/lib"
+)
 
 
 
