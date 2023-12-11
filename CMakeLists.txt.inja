@@ -1,13 +1,14 @@
 # CMakeLists.txt
 
 # Set the minimum required CMake version
-cmake_minimum_required({{project_name}} 3.12)
+cmake_minimum_required(VERSION {{cmake_version}})
 
 # Project name
 project(
   {{project_name}}
-  {{%if lang == "cpp"}}LANGUAGES CXX{{%endif%}}
-  {{%if lang == "c"}}LANGUAGES C{{%endif%}}
+  {{%if lang == "cpp"}}LANGUAGES CXX
+  {{%elseif lang == "c"}}LANGUAGES C
+  {{%endif%}}
 )
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 {%if lang ==  "cpp"%}}set(CMAKE_CXX_STANDARD {{lang_version}}
