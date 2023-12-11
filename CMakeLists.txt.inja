@@ -20,7 +20,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 file(GLOB_RECURSE SOURCE_FILES src/*.{{lang}})
 
-add_library({{project_name}} STATIC ${SOURCE_FILES})
+add_library({{project_name}} SHARED ${SOURCE_FILES})
 
 target_include_directories({{project_name}} PUBLIC {{include_dir}})
 
