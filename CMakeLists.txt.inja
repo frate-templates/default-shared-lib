@@ -31,6 +31,12 @@ install(TARGETS {{project_name}}
     ARCHIVE DESTINATION lib
 )
 
+set(BUILD_DIR {{ build_dir }})
+set_target_properties({{project_name}} PROPERTIES RUNTIME_OUTPUT_DIRECTORY {{build_dir}})
+
+
+
+
 install(DIRECTORY include/
     DESTINATION include
 )
