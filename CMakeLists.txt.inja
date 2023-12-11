@@ -6,6 +6,7 @@ cmake_minimum_required(VERSION {{cmake_version}})
 # Project name
 project(
   {{project_name}}
+  DESCRIPTION "{{project_description}}"
   {{%if lang == "cpp"}}LANGUAGES CXX
   {{%elseif lang == "c"}}LANGUAGES C
   {{%endif%}}
