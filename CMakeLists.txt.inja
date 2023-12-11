@@ -21,7 +21,7 @@ file(GLOB_RECURSE SOURCE_FILES src/*.{{lang}})
 
 add_library({{project_name}} STATIC ${SOURCE_FILES})
 
-target_include_directories({{project_name}} PUBLIC include)
+target_include_directories({{project_name}} PUBLIC {{include_dir}})
 
 install(TARGETS {{project_name}} 
     ARCHIVE DESTINATION lib
