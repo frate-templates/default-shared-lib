@@ -16,7 +16,7 @@ set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 {%else if lang == "c"%}set(CMAKE_C_STANDARD {{lang_version}}
 {%endif%})
 
-{{ packages("") }}
+{{ frate.packages("") }}
 
 file(GLOB_RECURSE SOURCE_FILES src/*.{{lang}})
 
